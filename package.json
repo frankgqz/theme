@@ -2,7 +2,7 @@
   "name": "@gqz/theme",
   "version": "0.0.1",
   "private": true,
-  "main": "src/index.js",
+  "main": "index.js",
   "module": "src/index.js",
   "types": "src/index.ts",
   "files": ["src", "theme.css"],
