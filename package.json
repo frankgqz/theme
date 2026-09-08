@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "module": "src/index.js",
   "types": "src/index.ts",
-  "files": ["src"],
+  "files": ["src", "theme.css"],
   "exports": {
-    "./theme.css": "./src/theme.css",
+    "./styles.css": "./theme.css",
     ".": {
       "types": "./src/index.ts",
       "import": "./src/index.js",
