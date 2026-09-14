@@ -1,10 +1,7 @@
 import { useState } from 'react'
+import { useTheme } from './useTheme'
 import { Theme, themes } from './theme'
 
-export interface ThemeToggleProps {
-  currentTheme: Theme
-  onToggle: () => void
-}
 
 const themeIcons: Record<Theme, string> = {
   wood: '🍂',
@@ -20,13 +17,15 @@ const toggleBg: Record<Theme, string> = {
   matcha: '#E0DDD5',
 }
 
-export default function ThemeToggle({ currentTheme, onToggle }: ThemeToggleProps) {
+export default function ThemeToggle() {
+  const { activeTheme, setActiveTheme } = useTheme()
   const [pop, setPop] = useState(false)
 
   const handleClick = () => {
     setPop(true)
     setTimeout(() => setPop(false), 220)
-    onToggle()
+    const idx = themeOrder.indexOf(activeTheme)
+    setActiveTheme(themeOrder[(idx + 1) % themeOrder.length])
   }
 
   return (
