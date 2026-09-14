@@ -1,17 +1,22 @@
 {
   "name": "@gqz/theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
-  "main": "index.js",
+  "main": "src/index.js",
   "module": "src/index.js",
   "types": "src/index.ts",
   "files": ["src", "theme.css"],
   "exports": {
-    "./styles.css": "./theme.css",
     ".": {
       "types": "./src/index.ts",
       "import": "./src/index.js",
       "require": "./src/index.js"
+    },
+    "./theme.css": "./theme.css",
+    "./ThemeToggle": {
+      "types": "./src/ThemeToggle.ts",
+      "import": "./src/ThemeToggle.js",
+      "require": "./src/ThemeToggle.js"
     }
   },
   "repository": "github:frankgqz/theme"
