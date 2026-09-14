@@ -1,6 +1,8 @@
 'use client'
 import { createContext, useContext } from 'react'
 import type { Theme, ThemeColors } from './theme'
+export type { Theme, ThemeColors } from './theme'
+
 
 export const STORAGE_KEY = 'gqz-theme'
 
