@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useTheme } from './useTheme'
-import { Theme, themes } from './theme'
+import { Theme, themes, themeOrder } from './theme'
+
 
 
 const themeIcons: Record<Theme, string> = {
@@ -36,13 +37,13 @@ export default function ThemeToggle() {
       style={{
         width: 56,
         height: 28,
-        backgroundColor: toggleBg[currentTheme],
+        backgroundColor: toggleBg[activeTheme],
         boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.12), 0 4px 14px rgba(0,0,0,0.06)',
         transition: 'background-color 320ms ease',
       }}
     >
       <div
-        key={currentTheme}
+        key={activeTheme}
         style={{
           position: 'absolute',
           top: 4,
@@ -50,7 +51,7 @@ export default function ThemeToggle() {
           width: 20,
           height: 20,
           borderRadius: '9999px',
-          backgroundColor: themes[currentTheme].accent,
+          backgroundColor: themes[activeTheme].accent,
           boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
           display: 'flex',
           alignItems: 'center',
@@ -61,7 +62,7 @@ export default function ThemeToggle() {
         }}
       >
         <span style={{ display: 'inline-block', animation: 'theme-icon-spin 380ms ease-out' }}>
-          {themeIcons[currentTheme]}
+          {themeIcons[activeTheme]}
         </span>
       </div>
     </button>
