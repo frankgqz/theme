@@ -10,6 +10,7 @@
   --theme-btn-end: #8B7355;
   --theme-btn-shadow: 0 8px 32px rgba(139,115,85,0.36), 0 2px 8px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.12);
   --theme-btn-shadow-pressed: 0 2px 12px rgba(139,115,85,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+  --theme-panel: #241710;   /* ← add this line */
 }
 
 [data-theme='dark'] {
@@ -22,6 +23,7 @@
   --theme-btn-end: #818CF8;
   --theme-btn-shadow: 0 8px 40px rgba(99,102,241,0.5), 0 2px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.15);
   --theme-btn-shadow-pressed: 0 2px 16px rgba(99,102,241,0.6), inset 0 1px 0 rgba(255,255,255,0.12);
+  --theme-panel: #1a1a1a;   /* ← add this line */    
 }
 
 [data-theme='sky'] {
@@ -34,6 +36,7 @@
   --theme-btn-end: #90B0D5;
   --theme-btn-shadow: 0 8px 32px rgba(96,128,168,0.3), 0 2px 8px rgba(96,128,168,0.2), inset 0 1px 0 rgba(255,255,255,0.15);
   --theme-btn-shadow-pressed: 0 2px 12px rgba(96,128,168,0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+  --theme-panel: #ffffff;   /* ← add this line */
 }
 
 [data-theme='matcha'] {
@@ -46,6 +49,7 @@
   --theme-btn-end: #7A8B70;
   --theme-btn-shadow: 0 8px 32px rgba(90,107,85,0.3), 0 2px 8px rgba(90,107,85,0.15), inset 0 1px 0 rgba(255,255,255,0.12);
   --theme-btn-shadow-pressed: 0 2px 12px rgba(90,107,85,0.3), inset 0 1px 0 rgba(255,255,255,0.08);
+  --theme-panel: #fbfbf2;   /* ← add this line */
 }
 
 
