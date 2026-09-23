@@ -11,6 +11,8 @@ export interface ThemeColors {
   buttonEnd: string
   buttonShadow: string
   buttonShadowPressed: string
+  particleHues?: { hue: [number, number]; sat: [number, number] }[];
+
   // typography
   fontFamily: string
   fontFamilyHeading: string
@@ -42,7 +44,7 @@ export const themes: Record<Theme, ThemeColors> = {
     buttonEnd: '#8b6f47',
     buttonShadow: 'rgba(139, 111, 71, 0.5)',
     buttonShadowPressed: 'rgba(139, 111, 71, 0.2)',
-    particleHues?: [
+    particleHues: [
       { hue: [15, 35],  sat: [50, 80] },
       { hue: [25, 45],  sat: [70, 90] },
       { hue: [0, 20],   sat: [65, 90] },
@@ -75,7 +77,7 @@ export const themes: Record<Theme, ThemeColors> = {
     buttonEnd: '#1a1a1a',
     buttonShadow: 'rgba(0, 0, 0, 0.6)',
     buttonShadowPressed: 'rgba(0, 0, 0, 0.3)',
-    particleHues?: [
+    particleHues: [
       { hue: [200, 260], sat: [70, 100] },
       { hue: [220, 280], sat: [70, 100] },
       { hue: [250, 290], sat: [70, 100] },
@@ -107,7 +109,7 @@ export const themes: Record<Theme, ThemeColors> = {
     buttonEnd: '#1d4ed8',
     buttonShadow: 'rgba(29, 78, 216, 0.4)',
     buttonShadowPressed: 'rgba(29, 78, 216, 0.2)',
-    particleHues?: [
+    particleHues: [
       { hue: [200, 230], sat: [20, 40] },
       { hue: [230, 270], sat: [15, 35] },
       { hue: [250, 280], sat: [20, 40] },
@@ -138,7 +140,7 @@ export const themes: Record<Theme, ThemeColors> = {
     buttonEnd: '#4f6b29',
     buttonShadow: 'rgba(79, 107, 41, 0.4)',
     buttonShadowPressed: 'rgba(79, 107, 41, 0.2)',
-    particleHues?: [
+    particleHues: [
       { hue: [20, 45],  sat: [20, 50] },
       { hue: [90, 130], sat: [20, 50] },
       { hue: [140, 180], sat: [15, 45] },
