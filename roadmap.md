@@ -9,6 +9,8 @@ the theme button can be in this repository,
 ## Design directions (2026-10-07 — Frank's brainstorm)
 
 - 🌙 night (metal): great as it is — no changes wanted
+- Fonts DECIDED 2026-10-07: wood = Fredericka the Great, bubble = Cause,
+  matcha = Square Peg, night = JetBrains Mono (unchanged)
 - 🫧 bubble: keep its current font for now. ?  Frank wants ONE theme to go
   "delicate — artistic, mildly engraved, thin" — open: is that bubble's new
   vibe (font kept) or a new 5th theme?
