@@ -19,8 +19,13 @@ package `@gqz/theme`, lockfile-pinned → update ritual `npm update @gqz/theme`
   (14–18px). Radius is per-theme mood.
 - Cookie `gqz-theme` (name stable); values renamed dark→night / sky→bubble
   with legacy mapping in `storage.ts` — keep that pattern when renaming again.
-- Fonts load via Google Fonts `@import` at the top of theme.css (JetBrains
-  Mono, Fraunces).
+- Fonts (current): JetBrains Mono, Fredericka the Great, Klee One, Shantell
+  Sans — declared as Google Fonts `@import` at the top of theme.css.
+- ! VERIFIED 2026-10-12: Turbopack STRIPS external `@import` from bundled
+  CSS (pickleball's built bundle had zero trace of fonts.googleapis — every
+  theme font silently fell back; Klee One's fallback reads as slanted bold).
+  Vite keeps it (gqz was fine). Turbopack consumers must load the same URL
+  as a `<link>` in the layout head — pickleball's `app/layout.tsx` does.
 
 ## Conventions
 - ! Synced files may import only relative siblings or react — a `@gqz/theme`
