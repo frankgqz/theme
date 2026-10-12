@@ -58,6 +58,8 @@ const MONO = '"JetBrains Mono", var(--font-geist-mono, ui-monospace), monospace'
 const FREDERICKA = '"Fredericka the Great", Georgia, serif'
 const CAUSE = '"Cause", ui-rounded, "Segoe Sans", system-ui, sans-serif'
 const PLAYWRITE = '"Playwrite NG Modern", cursive'
+const FRAUNCES = '"Fraunces", Georgia, serif'
+const DMSANS = '"DM Sans", ui-sans-serif, system-ui, sans-serif'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
 function hexA(hex: string, alpha: number): string {
@@ -196,24 +198,24 @@ export const themes: Record<Theme, ThemeColors> = {
     shadowStrength: 0.12,
   }),
 
-  // MATCHA — warm stone + sage, Fraunces serif
+  // ONSEN STONE — wet stone, cedar, moss, steam; Fraunces + DM Sans
   matcha: make({
     primitives: {
-      bg: '#f0f4e8',
-      surface: '#fbfbf2',
-      text: '#2d3a1f',
-      muted: '#6b7a52',
-      accent: '#7a9e3f',
-      accent2: '#4f6b29',
-      sparkle: '#a8c46a',
+      bg: '#e9eae5',
+      surface: '#f7f8f4',
+      text: '#2e3538',
+      muted: '#6b7472',
+      accent: '#6f8464',
+      accent2: '#a9714e',
+      sparkle: '#c5d4cc',
     },
     particleHues: [
-      { hue: [20, 45],  sat: [20, 50] },
-      { hue: [90, 130], sat: [20, 50] },
-      { hue: [140, 180], sat: [15, 45] },
+      { hue: [80, 130], sat: [8, 22] },   // moss
+      { hue: [20, 40],  sat: [18, 38] },  // cedar
+      { hue: [160, 190], sat: [6, 16] },  // steam
     ],
-    fontFamily: PLAYWRITE,
-    fontFamilyHeading: PLAYWRITE,
+    fontFamily: DMSANS,
+    fontFamilyHeading: FRAUNCES,
     radiusButton: '12px',
     radiusCard: '16px',
     radiusInput: '6px',

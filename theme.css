@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cause&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=DM+Sans:wght@400;500;700&display=swap");
 
 
 /* src/theme.css — tiered palette
@@ -78,13 +78,13 @@
   --theme-radius-button: 14px;
   --theme-radius-card: 18px;
   --theme-radius-input: 8px;
-  --c1: #f0f4e8;
-  --c2: #fbfbf2;
-  --c3: #2d3a1f;
-  --c4: #6b7a52;
-  --c5: #7a9e3f;
-  --c6: #4f6b29;
-  --c7: #a8c46a;
+  --c1: #e9eae5;
+  --c2: #f7f8f4;
+  --c3: #2e3538;
+  --c4: #6b7472;
+  --c5: #6f8464;
+  --c6: #a9714e;
+  --c7: #c5d4cc;
 }
 
 @keyframes theme-icon-spin {
