@@ -60,6 +60,8 @@ const CAUSE = '"Cause", ui-rounded, "Segoe Sans", system-ui, sans-serif'
 const PLAYWRITE = '"Playwrite NG Modern", cursive'
 const FRAUNCES = '"Fraunces", Georgia, serif'
 const DMSANS = '"DM Sans", ui-sans-serif, system-ui, sans-serif'
+const KLEEONE = '"Klee One", "Segoe Print", cursive'
+const FUZZY = '"Fuzzy Bubbles", ui-rounded, cursive'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
 function hexA(hex: string, alpha: number): string {
@@ -190,8 +192,8 @@ export const themes: Record<Theme, ThemeColors> = {
       { hue: [260, 290], sat: [50, 80] },
       { hue: [200, 235], sat: [55, 85] },
     ],
-    fontFamily: CAUSE,
-    fontFamilyHeading: CAUSE,
+    fontFamily: FUZZY,
+    fontFamilyHeading: FUZZY,
     radiusButton: '20px',
     radiusCard: '24px',
     radiusInput: '12px',
@@ -214,8 +216,8 @@ export const themes: Record<Theme, ThemeColors> = {
       { hue: [20, 40],  sat: [18, 38] },  // cedar
       { hue: [160, 190], sat: [6, 16] },  // steam
     ],
-    fontFamily: DMSANS,
-    fontFamilyHeading: FRAUNCES,
+    fontFamily: KLEEONE,
+    fontFamilyHeading: KLEEONE, // one font for everything — Frank's pick
     radiusButton: '12px',
     radiusCard: '16px',
     radiusInput: '6px',
