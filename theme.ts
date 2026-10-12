@@ -61,7 +61,7 @@ const PLAYWRITE = '"Playwrite NG Modern", cursive'
 const FRAUNCES = '"Fraunces", Georgia, serif'
 const DMSANS = '"DM Sans", ui-sans-serif, system-ui, sans-serif'
 const KLEEONE = '"Klee One", "Segoe Print", cursive'
-const FUZZY = '"Fuzzy Bubbles", ui-rounded, cursive'
+const SHANTELL = '"Shantell Sans", ui-rounded, cursive'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
 function hexA(hex: string, alpha: number): string {
@@ -192,8 +192,8 @@ export const themes: Record<Theme, ThemeColors> = {
       { hue: [260, 290], sat: [50, 80] },
       { hue: [200, 235], sat: [55, 85] },
     ],
-    fontFamily: FUZZY,
-    fontFamilyHeading: FUZZY,
+    fontFamily: SHANTELL,
+    fontFamilyHeading: SHANTELL,
     radiusButton: '20px',
     radiusCard: '24px',
     radiusInput: '12px',
