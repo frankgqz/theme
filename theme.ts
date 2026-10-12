@@ -62,6 +62,12 @@ const FRAUNCES = '"Fraunces", Georgia, serif'
 const DMSANS = '"DM Sans", ui-sans-serif, system-ui, sans-serif'
 const GIRLNEXTDOOR = '"The Girl Next Door", cursive'
 const SHANTELL = '"Shantell Sans", ui-rounded, cursive'
+
+// Single source of truth for the font FILE loading. The font names below are
+// just strings — the browser needs the files too. Consumers render this as a
+// <link> in their layout head (Turbopack strips the theme.css @import — see
+// AGENTS.md); theme.css keeps the same URL as its @import for vite consumers.
+export const googleFontsUrl = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=The+Girl+Next+Door&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
 function hexA(hex: string, alpha: number): string {

@@ -1,5 +1,5 @@
 export { ThemeProvider } from './themeProvider'
 export { useTheme } from './useTheme'
 export { ThemeToggle } from './themeToggle'
-export { themes, themeOrder } from './theme'
+export { themes, themeOrder, googleFontsUrl } from './theme'
 export type { Theme, ThemeColors } from './theme'

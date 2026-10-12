@@ -23,9 +23,9 @@ package `@gqz/theme`, lockfile-pinned → update ritual `npm update @gqz/theme`
   Sans — declared as Google Fonts `@import` at the top of theme.css.
 - Font walk (2026-10-12, onsen slot): tried Klee One (Latin built for dense
   kanji — too light at display), Cedarville Cursive (extreme, hard to read),
-  Mali 300 (currently in — soft resort, pinned weight 300). Direction:
-  connected script, soft/gentle/warm, generous — not thin, not formal.
-  Saved for later (Frank): Sunshiney.
+  Mali 300 (soft resort). CURRENT: The Girl Next Door (Frank's pick 2026-10-12).
+  Direction: connected script, soft/gentle/warm, generous — not thin, not
+  formal. Saved for later (Frank): Sunshiney. Live contenders: Gaegu, Felipa.
 - ! VERIFIED 2026-10-12: Turbopack STRIPS external `@import` from bundled
   CSS (pickleball's built bundle had zero trace of fonts.googleapis — every
   theme font silently fell back; Klee One's fallback reads as slanted bold).
