@@ -60,7 +60,7 @@ const CAUSE = '"Cause", ui-rounded, "Segoe Sans", system-ui, sans-serif'
 const PLAYWRITE = '"Playwrite NG Modern", cursive'
 const FRAUNCES = '"Fraunces", Georgia, serif'
 const DMSANS = '"DM Sans", ui-sans-serif, system-ui, sans-serif'
-const CEDARVILLE = '"Cedarville Cursive", cursive'
+const MALI = '"Mali", ui-rounded, cursive'
 const SHANTELL = '"Shantell Sans", ui-rounded, cursive'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
@@ -216,8 +216,8 @@ export const themes: Record<Theme, ThemeColors> = {
       { hue: [20, 40],  sat: [18, 38] },  // cedar
       { hue: [160, 190], sat: [6, 16] },  // steam
     ],
-    fontFamily: CEDARVILLE,
-    fontFamilyHeading: CEDARVILLE, // one font for everything — Frank's pick
+    fontFamily: MALI,
+    fontFamilyHeading: MALI, // one font for everything — Frank's pick
     radiusButton: '12px',
     radiusCard: '16px',
     radiusInput: '6px',
