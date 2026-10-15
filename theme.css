@@ -42,8 +42,8 @@
   --c3: #f5e6d3;
   --c4: #b8956a;
   --c5: #d4a574;
-  --c6: #8b6f47;
-  --c7: #e8b06a;
+  --c6: #e8b06a;
+  --c7: #f4c887;
 }
 
 [data-theme='night'] {
@@ -132,10 +132,10 @@ body {
 
 /* night — the verb is neon (accent-2 = the cyberpunk green), never murky */
 [data-theme='night'] {
-  --theme-hover-brightness: 1.22;
-  --theme-hover-saturate: 1.3;
-  --theme-hover-shadow: 0 0 22px color-mix(in srgb, var(--c6) 50%, transparent);
-  --theme-focus-shadow: 0 0 0 2px var(--c1), 0 0 0 5px var(--c5), 0 0 16px color-mix(in srgb, var(--c5) 60%, transparent);
+  --theme-hover-brightness: 1.18;
+  --theme-hover-saturate: 1.25;
+  --theme-hover-shadow: 0 0 24px color-mix(in srgb, var(--c6) 55%, transparent), 0 0 6px color-mix(in srgb, var(--c6) 40%, transparent);
+  --theme-focus-shadow: 0 0 0 2px var(--c1), 0 0 0 5px var(--c5), 0 0 18px color-mix(in srgb, var(--c5) 55%, transparent), 0 0 30px color-mix(in srgb, var(--c6) 45%, transparent);
 }
 
 /* bubble — the verb is float (the pink-into-sky gradient layer intact) */
