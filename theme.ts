@@ -153,8 +153,8 @@ export const themes: Record<Theme, ThemeColors> = {
       text: '#f5e6d3',
       muted: '#b8956a',
       accent: '#d4a574',
-      accent2: '#8b6f47',
-      sparkle: '#e8b06a',
+      accent2: '#e8b06a',
+      sparkle: '#f4c887',
     },
     particleHues: [
       { hue: [15, 35],  sat: [50, 80] },
