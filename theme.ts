@@ -176,7 +176,7 @@ export const themes: Record<Theme, ThemeColors> = {
     primitives: {
       bg: '#131316',
       panel: '#1C1F24',
-      text: '#f5f5f5',
+      text: '#f1f4f8',
       subtext: '#959AA3',
       accent: '#35C4FF',
       accent2: '#FF6A1F',
@@ -227,11 +227,11 @@ export const themes: Record<Theme, ThemeColors> = {
     primitives: {
       bg: '#e6eded',
       panel: '#f8fbfb',
-      text: '#22394b',
+      text: '#2B3A2E',
       subtext: '#7c96a1',
-      accent: '#6f8464',
-      accent2: '#41647c',
-      sparkle: '#6da89b',
+      accent: '#4F9B6A',
+      accent2: '#C570D4',
+      sparkle: '#41517c',
     },
     particleHues: [
       { hue: [80, 130], sat: [8, 22] },   // moss

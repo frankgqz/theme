@@ -70,7 +70,7 @@
      --c1..--c7 are deprecated position aliases */
   --theme-bg: #131316;
   --theme-panel: #1C1F24;
-  --theme-text: #f5f5f5;
+  --theme-text: #f1f4f8;
   --theme-subtext: #959AA3;
   --theme-accent: #35C4FF;
   --theme-accent-2: #FF6A1F;
@@ -115,12 +115,12 @@
      --c1..--c7 are deprecated position aliases */
   --theme-bg: #e6eded;
   --theme-panel: #f8fbfb;
-  --theme-text: #22394b;
+  --theme-text: #2B3A2E;
   --theme-subtext: #7c96a1;
-  --theme-accent: #6f8464;
-  --theme-accent-2: #41647c;
-  --theme-sparkle: #6da89b;
-  --theme-wash: var(--theme-sparkle); /* onsen washes with its teal mist */
+  --theme-accent: #4F9B6A;
+  --theme-accent-2: #C570D4;
+  --theme-sparkle: #41517c;
+  --theme-wash: var(--theme-sparkle); /* onsen washes with its granite mist */
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);
