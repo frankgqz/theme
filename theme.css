@@ -157,16 +157,16 @@ body {
 [data-theme='wood'] {
   --theme-hover-brightness: 1.14;
   --theme-hover-saturate: 1.18;
-  --theme-hover-shadow: 0 0 18px color-mix(in srgb, var(--theme-sparkle) 45%, transparent);
-  --theme-focus-shadow: 0 0 0 3px var(--theme-bg), 0 0 0 6px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
+  --theme-hover-shadow: 0 0 20px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
+  --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
 }
 
 /* night — the verb is neon (accent-2 = the cyberpunk green), never murky */
 [data-theme='night'] {
   --theme-hover-brightness: 1.18;
   --theme-hover-saturate: 1.25;
-  --theme-hover-shadow: 0 0 24px color-mix(in srgb, var(--theme-accent) 55%, transparent), 0 0 6px color-mix(in srgb, var(--theme-accent) 40%, transparent);
-  --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-accent-2), 0 0 18px color-mix(in srgb, var(--theme-accent-2) 55%, transparent), 0 0 30px color-mix(in srgb, var(--theme-accent) 45%, transparent);
+  --theme-hover-shadow: 0 0 20px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
+  --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
 }
 
 /* bubble — the verb is float (the pink-into-sky gradient layer intact) */
@@ -174,8 +174,8 @@ body {
   --theme-hover-lift: 3px;
   --theme-hover-brightness: 1.03;
   --theme-hover-saturate: 1.1;
-  --theme-hover-shadow: 0 12px 26px rgba(46, 74, 107, 0.18);
-  --theme-focus-shadow: 0 0 0 2px #fff, 0 0 0 6px color-mix(in srgb, var(--theme-accent) 65%, transparent);
+  --theme-hover-shadow: 0 0 20px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
+  --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
 }
 
 /* onsen — the verb is mist (sparkle = the steam), ring in moss (readable) */
@@ -183,8 +183,8 @@ body {
 [data-theme='matcha'] {
   --theme-hover-brightness: 1.05;
   --theme-hover-saturate: 1.08;
-  --theme-hover-shadow: 0 0 0 1px color-mix(in srgb, var(--theme-sparkle) 85%, transparent), 0 0 16px color-mix(in srgb, var(--theme-sparkle) 50%, transparent);
-  --theme-focus-shadow: 0 0 0 2px var(--theme-panel), 0 0 0 5px var(--theme-accent), 0 0 14px color-mix(in srgb, var(--theme-accent) 35%, transparent);
+  --theme-hover-shadow: 0 0 20px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
+  --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
 }
 
 /* motion + state transitions */
@@ -200,7 +200,7 @@ body {
 
 /* hover — only on devices that actually hover (no stuck taps) */
 @media (hover: hover) {
-  :where(button, [role='button'], .btn, [data-interactive]):hover {
+  :where(button, [role='button'], input, select, textarea, a, .btn, [data-interactive]):hover {
     transform: translateY(calc(var(--theme-hover-lift) * -1));
     filter: brightness(var(--theme-hover-brightness)) saturate(var(--theme-hover-saturate));
     box-shadow: var(--theme-hover-shadow);
