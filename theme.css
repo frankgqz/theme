@@ -98,13 +98,13 @@
 [data-theme='matcha']  {
   /* named primitives — the vocabulary (a name carries the why);
      --c1..--c7 are deprecated position aliases */
-  --theme-bg: #e9eae5;
-  --theme-panel: #f7f8f4;
-  --theme-text: #2e3538;
-  --theme-subtext: #6b7472;
+  --theme-bg: #eef4f3;
+  --theme-panel: #f7fbfa;
+  --theme-text: #22394b;
+  --theme-subtext: #7c96a1;
   --theme-accent: #6f8464;
-  --theme-accent-2: #86a3b0;
-  --theme-sparkle: #c5d4cc;
+  --theme-accent-2: #41647c;
+  --theme-sparkle: #6da89b;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);

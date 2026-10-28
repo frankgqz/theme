@@ -225,13 +225,13 @@ export const themes: Record<Theme, ThemeColors> = {
   // ONSEN STONE — wet stone, cedar, moss, steam; Fraunces + DM Sans
   onsen: make({
     primitives: {
-      bg: '#e9eae5',
-      panel: '#f7f8f4',
-      text: '#2e3538',
-      subtext: '#6b7472',
+      bg: '#eef4f3',
+      panel: '#f7fbfa',
+      text: '#22394b',
+      subtext: '#7c96a1',
       accent: '#6f8464',
-      accent2: '#86a3b0',
-      sparkle: '#c5d4cc',
+      accent2: '#41647c',
+      sparkle: '#6da89b',
     },
     particleHues: [
       { hue: [80, 130], sat: [8, 22] },   // moss
