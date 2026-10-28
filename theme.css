@@ -23,6 +23,21 @@
   --theme-border: color-mix(in srgb, var(--theme-subtext) 35%, transparent);
   --theme-muted-bg: color-mix(in srgb, var(--theme-subtext) 12%, var(--theme-panel));
   --theme-hover-bg: color-mix(in srgb, var(--theme-subtext) 22%, var(--theme-panel));
+
+  /* Tier 2.5 — the role brush (Frank 2026-10-28): one recipe, every consumer.
+     Fill = accent, glow = sparkle, alarm = red. Themes redirect --theme-wash. */
+  --theme-wash: var(--theme-accent);
+  --theme-halo: color-mix(in srgb, var(--theme-sparkle) 75%, transparent);
+  --theme-role-primary-bg: linear-gradient(180deg, color-mix(in srgb, var(--theme-accent) 85%, #fff) 0%, var(--theme-accent) 52%, color-mix(in srgb, var(--theme-accent) 72%, var(--theme-accent-2)) 100%);
+  --theme-role-primary-shadow: inset 0 1px 0 #ffffff59, inset 0 -2px 0 #0003, 0 1px 2px #0006, 0 8px 24px -6px var(--theme-halo);
+  --theme-role-primary-pressed: inset 0 1px 0 #ffffff30, inset 0 -1px 0 #0002, 0 0 2px #0005, 0 3px 10px -6px var(--theme-halo);
+  --theme-role-quiet-bg: color-mix(in srgb, var(--theme-wash) 14%, transparent);
+  --theme-role-quiet-bg-hover: color-mix(in srgb, var(--theme-wash) 20%, transparent);
+  --theme-role-quiet-border: color-mix(in srgb, var(--theme-wash) 32%, transparent);
+  --theme-role-quiet-border-hover: color-mix(in srgb, var(--theme-wash) 55%, transparent);
+  --theme-role-tint-bg: color-mix(in srgb, var(--theme-wash) 22%, transparent);
+  --theme-role-tint-bg-hover: color-mix(in srgb, var(--theme-wash) 30%, transparent);
+  --theme-role-tint-border: color-mix(in srgb, var(--theme-wash) 45%, transparent);
 }
 
 /* ---- Tier 1 — primitives per theme ---- */
@@ -105,6 +120,7 @@
   --theme-accent: #6f8464;
   --theme-accent-2: #41647c;
   --theme-sparkle: #6da89b;
+  --theme-wash: var(--theme-sparkle); /* onsen washes with its teal mist */
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);
