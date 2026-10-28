@@ -113,8 +113,8 @@
 [data-theme='matcha']  {
   /* named primitives — the vocabulary (a name carries the why);
      --c1..--c7 are deprecated position aliases */
-  --theme-bg: #eef4f3;
-  --theme-panel: #f7fbfa;
+  --theme-bg: #e6eded;
+  --theme-panel: #f8fbfb;
   --theme-text: #22394b;
   --theme-subtext: #7c96a1;
   --theme-accent: #6f8464;
