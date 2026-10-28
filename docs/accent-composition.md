@@ -77,3 +77,28 @@ Target shape (green family, three volumes):
 Consequences to accept knowingly: (1) button gradient sage→cedar = light-green→dark-green, one family in two volumes (the wood pattern inverted — wood pops green on warm ground; onsen goes green-dominant with stone ground); (2) accent2 (dark cedar) now sits near text (dark sage) in value — keep text DESATURATED and cedar SATURATED so they never alias; (3) team-1/team-2 = accent/accent2 (sage vs cedar) remain sanctioned and read apart by value.
 
 Route 1's one virtue — instant unification with zero text-risk — noted and rejected: it buys unity by spending identity.
+
+## Part 3 (2026-10-28) — final values, landed (committed, not pushed)
+
+Frank's final direction: bg #e6eded · text #2B3A2E very dark green · accent1 conifer green "or similar" · accent2 cherry blossom (corrected: pink-PURPLE, HSL ~290, not too pink) · sparkle granite/slate #41517c · overall "a bit more pop/vibrancy". Landed values (pop applied to accent1; his literals honored elsewhere):
+
+| slot | value | note |
+|---|---|---|
+| bg | #e6eded | his literal, unchanged |
+| panel | #f8fbfb | unchanged |
+| text | #2B3A2E | his literal |
+| subtext | #7c96a1 | UNCHANGED — steam-gray kept as the cool counterpoint (flagged to Frank) |
+| accent | #4F9B6A | his #558b66 family, sat 24%→33% (the pop) |
+| accent-2 | #C570D4 | cherry blossom HSL 291°/54%/64% |
+| sparkle | #41517c | his granite literal |
+| night text | #f1f4f8 | agreed cool tinge |
+
+Also fixed on the way: gqz/index.html's no-flash map still keyed `matcha` (stale old palette) — onsen's first paint was falling back. Refreshed all four entries to live primitives + renamed the key to `onsen`. Story words now: wet stone, conifer, cherry blossom, granite. Commits: theme (palette + this doc), gqz (map). Pickleball's local synced copies refreshed from source; its postinstall sync picks up the pushed values at next deploy build. NOT pushed — Frank pushes: theme repo first, then consumers.
+
+## Part 4 (2026-10-28) — Frank's HSL palette landed, and the pattern insight
+
+Frank restated all four themes in HSL and identified the pattern: **the colored trio ascends in hue — accent < sparkle < accent-2** (wood 31<44<91 ✓, bubble 205<254<344 ✓, onsen 161<184<230 ✓; night 198>140>20 is the deliberate complementary exception). Values are now stored AS hsl() strings so the ramp stays readable in the source; hexA() parses hsl for the derived rgba values.
+
+Theme 4 (onsen) landed verbatim: bg hsl(150,16%,92%) · panel hsl(155,27%,99%) · text hsl(152,12%,15%) · subtext hsl(158,15%,35%) (green family — Frank's note closed) · accent hsl(161,58%,45%) · accent-2 hsl(230,64%,74%) · sparkle hsl(184,70%,67%). The cherry-blossom idea is superseded by this ramp.
+
+Same round: EventPool DUPR badges themed — fetched score = role-quiet (accent family), manual score = role-tint (accent-2 family, replacing hardcoded bg-red-50/text-red-700); provenance distinction kept through two theme colors. Committed across theme/pickleball/gqz; not pushed.
