@@ -72,7 +72,7 @@
   --theme-panel: #1C1F24;
   --theme-text: #f1f4f8;
   --theme-subtext: #959AA3;
-  --theme-accent: #35C4FF;
+  --theme-accent: hsl(225, 70%, 48%); /* city blue (Frank): the sky blue read too close to bubble baby blue */
   --theme-accent-2: #FF6A1F;
   --theme-sparkle: #2EE66B;
   --c1: var(--theme-bg);

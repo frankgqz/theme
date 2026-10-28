@@ -194,7 +194,7 @@ export const themes: Record<Theme, ThemeColors> = {
       panel: '#1C1F24',
       text: '#f1f4f8',
       subtext: '#959AA3',
-      accent: '#35C4FF',
+      accent: 'hsl(225, 70%, 48%)',
       accent2: '#FF6A1F',
       sparkle: '#2EE66B',
     },
