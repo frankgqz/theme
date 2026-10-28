@@ -35,8 +35,8 @@
   --theme-text: #f5e6d3;
   --theme-subtext: #b8956a;
   --theme-accent: #f4c887;
-  --theme-accent-2: #e8b06a;
-  --theme-sparkle: #8ab264;
+  --theme-accent-2: #8ab264;
+  --theme-sparkle: #e8b06a;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);
@@ -103,7 +103,7 @@
   --theme-text: #2e3538;
   --theme-subtext: #6b7472;
   --theme-accent: #6f8464;
-  --theme-accent-2: #a3b0a6;
+  --theme-accent-2: #86a3b0;
   --theme-sparkle: #c5d4cc;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
