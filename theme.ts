@@ -152,9 +152,9 @@ export const themes: Record<Theme, ThemeColors> = {
       panel: '#241710',
       text: '#f5e6d3',
       subtext: '#b8956a',
-      accent: '#f4c887',
+      accent: '#e8b06a',
       accent2: '#8ab264',
-      sparkle: '#e8b06a',
+      sparkle: '#f4c887',
     },
     particleHues: [
       { hue: [15, 35],  sat: [50, 80] },
@@ -180,7 +180,7 @@ export const themes: Record<Theme, ThemeColors> = {
       subtext: '#959AA3',
       accent: '#35C4FF',
       accent2: '#FF6A1F',
-      sparkle: '#FF6A1F',
+      sparkle: '#2EE66B',
     },
     particleHues: [
       { hue: [15, 35], sat: [85, 100] },
@@ -205,7 +205,7 @@ export const themes: Record<Theme, ThemeColors> = {
       subtext: '#7FA8D6',
       accent: '#8ED0FF',
       accent2: '#FF7A9E',
-      sparkle: '#FFB3C7',
+      sparkle: '#C5B6F5',
     },
     particleHues: [
       { hue: [330, 360], sat: [60, 85] },
