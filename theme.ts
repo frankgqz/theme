@@ -7,9 +7,9 @@ export type Theme = 'wood' | 'night' | 'bubble' | 'onsen'
 // ============================================
 export interface ThemePrimitives {
   bg: string       // page background
-  surface: string  // panels, cards
+  panel: string  // panels, cards
   text: string     // primary text
-  muted: string    // subtext; borders derive from this + alpha
+  subtext: string    // subtext; borders derive from this + alpha
   accent: string   // primary highlight (buttons start)
   accent2: string  // secondary highlight (buttons end)
   sparkle: string  // glow / particles / vibrancy
@@ -106,9 +106,9 @@ function make(t: ThemeSpec): ThemeColors {
     // derived core colors
     bg: p.bg,
     text: p.text,
-    subtext: p.muted,
+    subtext: p.subtext,
     accent: p.accent,
-    panel: p.surface,
+    panel: p.panel,
     glow: `radial-gradient(circle, ${hexA(p.sparkle, 0.14)} 0%, transparent 70%)`,
     buttonStart: p.accent,
     buttonEnd: p.accent2,
@@ -149,12 +149,12 @@ export const themes: Record<Theme, ThemeColors> = {
   wood: make({
     primitives: {
       bg: '#1a120b',
-      surface: '#241710',
+      panel: '#241710',
       text: '#f5e6d3',
-      muted: '#b8956a',
-      accent: '#d4a574',
+      subtext: '#b8956a',
+      accent: '#f4c887',
       accent2: '#e8b06a',
-      sparkle: '#f4c887',
+      sparkle: '#8ab264',
     },
     particleHues: [
       { hue: [15, 35],  sat: [50, 80] },
@@ -175,9 +175,9 @@ export const themes: Record<Theme, ThemeColors> = {
   night: make({
     primitives: {
       bg: '#131316',
-      surface: '#1C1F24',
+      panel: '#1C1F24',
       text: '#f5f5f5',
-      muted: '#959AA3',
+      subtext: '#959AA3',
       accent: '#FF6A1F',
       accent2: '#35C4FF',
       sparkle: '#35C4FF',
@@ -200,12 +200,12 @@ export const themes: Record<Theme, ThemeColors> = {
   bubble: make({
     primitives: {
       bg: '#EAF6FF',
-      surface: '#ffffff',
+      panel: '#ffffff',
       text: '#2E4A6B',
-      muted: '#7FA8D6',
-      accent: '#FF8FC5',
-      accent2: '#8ED0FF',
-      sparkle: '#FF8FC5',
+      subtext: '#7FA8D6',
+      accent: '#8ED0FF',
+      accent2: '#FF7A9E',
+      sparkle: '#FFB3C7',
     },
     particleHues: [
       { hue: [330, 360], sat: [60, 85] },
@@ -226,11 +226,11 @@ export const themes: Record<Theme, ThemeColors> = {
   onsen: make({
     primitives: {
       bg: '#e9eae5',
-      surface: '#f7f8f4',
+      panel: '#f7f8f4',
       text: '#2e3538',
-      muted: '#6b7472',
+      subtext: '#6b7472',
       accent: '#6f8464',
-      accent2: '#a9714e',
+      accent2: '#a3b0a6',
       sparkle: '#c5d4cc',
     },
     particleHues: [
