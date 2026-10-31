@@ -136,8 +136,8 @@ function make(t: ThemeSpec): ThemeColors {
     motionEase: 'cubic-bezier(0.2, 0, 0, 1)',
     error: '#c4453c',
     disabledOpacity: 0.45,
-    focusRing: `0 0 0 2px ${hexA(p.bg, 0.9)}, 0 0 0 5px ${p.accent}`,
-    hoverShadow: `0 0 18px ${hexA(p.sparkle, 0.4)}`,
+    focusRing: `0 0 0 2px ${hexA(p.bg, 0.9)}, 0 0 0 5px ${p.sparkle}, 0 0 18px ${hexA(p.sparkle, 0.55)}`,
+    hoverShadow: `0 0 20px ${hexA(p.sparkle, 0.55)}`,
     particleHues: t.particleHues,
     // typography
     fontFamily: body,

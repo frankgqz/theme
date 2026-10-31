@@ -171,25 +171,25 @@ body {
 
 /* wood — the verb is an amber glow (accent-2 = the maple light) */
 [data-theme='wood'] {
-  --theme-hover-brightness: 1.14;
-  --theme-hover-saturate: 1.18;
+  --theme-hover-brightness: 1.09;
+  --theme-hover-saturate: 1.11;
   --theme-hover-shadow: 0 0 20px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
   --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
 }
 
 /* night — the verb is neon (accent-2 = the cyberpunk green), never murky */
 [data-theme='night'] {
-  --theme-hover-brightness: 1.18;
-  --theme-hover-saturate: 1.25;
+  --theme-hover-brightness: 1.11;
+  --theme-hover-saturate: 1.15;
   --theme-hover-shadow: 0 0 20px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
   --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
 }
 
 /* bubble — the verb is float (the pink-into-sky gradient layer intact) */
 [data-theme='bubble'] {
-  --theme-hover-lift: 3px;
+  --theme-hover-lift: 2px;
   --theme-hover-brightness: 1.03;
-  --theme-hover-saturate: 1.1;
+  --theme-hover-saturate: 1.08;
   --theme-hover-shadow: 0 0 20px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
   --theme-focus-shadow: 0 0 0 2px var(--theme-bg), 0 0 0 5px var(--theme-sparkle), 0 0 18px color-mix(in srgb, var(--theme-sparkle) 55%, transparent);
 }
