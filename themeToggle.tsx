@@ -7,7 +7,7 @@ const themeIcons: Record<Theme, string> = {
   night: '\u{1F319}',
   bubble: '\u{1FAE7}',
   onsen: '\u2668\uFE0F',
-  ink: '\u{1F359}',
+  onigiri: '\u{1F359}',
 }
 
 // The pentagon toggle (Frank 2026-11-24): five circles TOUCHING in a

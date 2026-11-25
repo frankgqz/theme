@@ -1,4 +1,4 @@
-export type Theme = 'wood' | 'night' | 'bubble' | 'onsen' | 'ink'
+export type Theme = 'wood' | 'night' | 'bubble' | 'onsen' | 'onigiri'
 
 // ============================================
 // Tier 1 — PRIMITIVES: the only typed colors.
@@ -291,12 +291,13 @@ export const themes: Record<Theme, ThemeColors> = {
     radiusInput: '6px',
     shadowStrength: 0.12,
   }),
-  // INK — black & white, the serious one ("apple themey kinda", Frank
+  // ONIGIRI — black & white, the serious one (the rice ball 🍙; key
+  // renamed from ink at Frank's call 2026-11-24) ("apple themey kinda", Frank
   // 2026-11-24): pure white ground, near-black text, zero hue. The highlight
   // law INVERTS on a light ground — sparkle = pure ink = the glow/focus
   // burns black against the white. Source Sans 3 (Frank's pick 2026-11-24;
   // was Libre Franklin "for now" — swapping = one edit here + the URL).
-  ink: make({
+  onigiri: make({
     primitives: {
       bg: '#FFFFFF',
       panel: '#F5F5F7',
@@ -318,4 +319,4 @@ export const themes: Record<Theme, ThemeColors> = {
   }),
 }
 
-export const themeOrder: Theme[] = ['wood', 'night', 'bubble', 'onsen', 'ink']
+export const themeOrder: Theme[] = ['wood', 'night', 'bubble', 'onsen', 'onigiri']

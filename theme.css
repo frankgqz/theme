@@ -269,7 +269,7 @@ body {
 }
 
 /* INK — black & white (the serious one); mirrors theme.ts primitives */
-[data-theme='ink'] {
+[data-theme='onigiri'], [data-theme='ink'] {  /* ink = the legacy alias */
   --theme-bg: #FFFFFF;
   --theme-panel: #F5F5F7;
   --theme-text: #3A3A3C;
