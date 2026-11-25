@@ -263,3 +263,24 @@ body {
     transform: none;
   }
 }
+
+/* INK — black & white (the serious one); mirrors theme.ts primitives */
+[data-theme='ink'] {
+  --theme-bg: #101012;
+  --theme-panel: #1B1B1F;
+  --theme-text: #F4F4F2;
+  --theme-subtext: #9E9EA3;
+  --theme-accent: #EDEDEA;
+  --theme-accent-2: #77777E;
+  --theme-sparkle: #FFFFFF;
+  --c1: var(--theme-bg);
+  --c2: var(--theme-panel);
+  --c3: var(--theme-text);
+  --c4: var(--theme-subtext);
+  --c5: var(--theme-accent);
+  --c6: var(--theme-accent-2);
+  --c7: var(--theme-sparkle);
+  --theme-radius-button: 8px;
+  --theme-radius-card: 10px;
+  --theme-radius-input: 4px;
+}

@@ -1,4 +1,4 @@
-export type Theme = 'wood' | 'night' | 'bubble' | 'onsen'
+export type Theme = 'wood' | 'night' | 'bubble' | 'onsen' | 'ink'
 
 // ============================================
 // Tier 1 — PRIMITIVES: the only typed colors.
@@ -261,6 +261,28 @@ export const themes: Record<Theme, ThemeColors> = {
     radiusInput: '6px',
     shadowStrength: 0.12,
   }),
+  // INK — black & white, the serious one. A pure value ladder: paper white
+  // on graphite black, zero hue anywhere. Sparkle = pure white = THE
+  // highlight (the glow family burns white against the ink ground).
+  // Font = Frank's call (the law: ask before assigning) — make() defaults.
+  ink: make({
+    primitives: {
+      bg: '#101012',
+      panel: '#1B1B1F',
+      text: '#F4F4F2',
+      subtext: '#9E9EA3',
+      accent: '#EDEDEA',
+      accent2: '#77777E',
+      sparkle: '#FFFFFF',
+    },
+    particleHues: [
+      { hue: [0, 0], sat: [0, 0] },   // mono: no hue, all value
+    ],
+    radiusButton: '8px',
+    radiusCard: '10px',
+    radiusInput: '4px',
+    shadowStrength: 0.5,
+  }),
 }
 
-export const themeOrder: Theme[] = ['wood', 'night', 'bubble', 'onsen']
+export const themeOrder: Theme[] = ['wood', 'night', 'bubble', 'onsen', 'ink']

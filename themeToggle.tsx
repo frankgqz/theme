@@ -1,65 +1,95 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTheme } from './useTheme'
 import { Theme, themes, themeOrder } from './theme'
 
 const themeIcons: Record<Theme, string> = {
-  wood: '🍂',
-  night: '🌙',
-  bubble: '🫧',
-  onsen: '♨️',
+  wood: '\u{1F342}',
+  night: '\u{1F319}',
+  bubble: '\u{1FAE7}',
+  onsen: '\u2668\uFE0F',
+  ink: '\u25D0',
 }
 
-const toggleBg: Record<Theme, string> = {
-  wood: '#E8E0D5',
-  night: '#22262C',
-  bubble: '#DCEEFF',
-  onsen: '#E9EAE5',
-}
-
+// The ring picker (Frank 2026-11-24): five circles orbit a centre. The
+// toggle walks the ring CLOCKWISE so the next theme rides up to the top,
+// where it enlarges — the other four stay visible, small. Clicking any
+// circle jumps straight to it. Reduced motion = no spin.
 export function ThemeToggle() {
   const { activeTheme, setActiveTheme } = useTheme()
-  const [pop, setPop] = useState(false)
-  const handleClick = () => {
-    setPop(true)
-    setTimeout(() => setPop(false), 220)
-    const idx = themeOrder.indexOf(activeTheme)
-    setActiveTheme(themeOrder[(idx + 1) % themeOrder.length])
-  }
+  const idx = Math.max(0, themeOrder.indexOf(activeTheme))
+  const [reduce, setReduce] = useState(false)
+  useEffect(() => {
+    setReduce(window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+  }, [])
+  const spin = reduce ? 'none' : 'transform 380ms cubic-bezier(.34,1.56,.64,1)'
+  const advance = () => setActiveTheme(themeOrder[(idx + 1) % themeOrder.length])
+
   return (
     <button
-      onClick={handleClick}
+      onClick={advance}
       aria-label="Toggle theme"
-      className="relative rounded-full"
+      title="toggle theme \u00b7 click a circle to jump"
       style={{
-        width: 56,
-        height: 28,
-        backgroundColor: toggleBg[activeTheme],
-        boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.12), 0 4px 14px rgba(0,0,0,0.06)',
-        transition: 'background-color 320ms ease',
+        position: 'relative',
+        width: 72,
+        height: 72,
+        padding: 0,
+        borderRadius: '9999px',
+        background: 'transparent',
+        border: '1px solid color-mix(in srgb, currentColor 18%, transparent)',
+        cursor: 'pointer',
       }}
     >
       <div
-        key={activeTheme}
         style={{
           position: 'absolute',
-          top: 4,
-          left: pop ? '32px' : '4px',
-          width: 20,
-          height: 20,
-          borderRadius: '9999px',
-          backgroundColor: themes[activeTheme].accent,
-          boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: 11,
-          transform: pop ? 'scale(1.08)' : 'scale(1)',
-          transition: 'left 320ms cubic-bezier(.34,1.56,.64,1), transform 220ms ease, background-color 320ms ease',
+          inset: 0,
+          transform: `rotate(${idx * 72}deg)`,
+          transition: spin,
         }}
       >
-        <span style={{ display: 'inline-block', animation: 'theme-icon-spin 380ms ease-out' }}>
-          {themeIcons[activeTheme]}
-        </span>
+        {themeOrder.map((key, i) => {
+          const active = key === activeTheme
+          return (
+            <div
+              key={key}
+              style={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: `rotate(${-i * 72}deg) translateY(-24px) scale(${active ? 1.9 : 1})`,
+                transition: spin,
+              }}
+            >
+              <div
+                onClick={(e) => { e.stopPropagation(); setActiveTheme(key) }}
+                title={key}
+                style={{
+                  width: 14,
+                  height: 14,
+                  marginLeft: -7,
+                  marginTop: -7,
+                  borderRadius: '9999px',
+                  background: themes[key].accent,
+                  boxShadow: active
+                    ? `0 0 12px ${themes[key].primitives.sparkle}`
+                    : '0 1px 3px rgba(0,0,0,0.25)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: active ? 9 : 7,
+                  opacity: active ? 1 : 0.7,
+                  transform: `rotate(${(i - idx) * 72}deg)`,
+                  transition: spin,
+                  cursor: 'pointer',
+                  lineHeight: 1,
+                }}
+              >
+                {themeIcons[key]}
+              </div>
+            </div>
+          )
+        })}
       </div>
     </button>
   )
