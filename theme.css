@@ -52,6 +52,7 @@
   --theme-accent: #e59b4e;
   --theme-accent-2: #8ab264;
   --theme-sparkle: #f7d268;
+  --theme-on-accent: #f5e6d3;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);
@@ -75,6 +76,7 @@
   --theme-accent: hsl(225, 70%, 48%); /* city blue (Frank): the sky blue read too close to bubble baby blue */
   --theme-accent-2: #FF6A1F;
   --theme-sparkle: #2EE66B;
+  --theme-on-accent: #f1f4f8;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);
@@ -97,6 +99,7 @@
   --theme-accent: #8ED0FF;
   --theme-accent-2: #FF7A9E;
   --theme-sparkle: #C5B6F5;
+  --theme-on-accent: #2E4A6B;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);
@@ -120,6 +123,7 @@
   --theme-accent: hsl(161, 58%, 45%);
   --theme-accent-2: hsl(230, 64%, 74%);
   --theme-sparkle: hsl(184, 70%, 67%);
+  --theme-on-accent: hsl(152, 12%, 15%);
   --theme-wash: var(--theme-sparkle); /* onsen washes with its spring mist */
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
@@ -273,6 +277,7 @@ body {
   --theme-accent: #2C2C2E;
   --theme-accent-2: #86868B;
   --theme-sparkle: #000000;
+  --theme-on-accent: #FFFFFF;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);

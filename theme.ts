@@ -28,6 +28,7 @@ export interface ThemeColors {
   glow: string
   buttonStart: string
   buttonEnd: string
+  buttonText: string // the label ON the fill (contrast-derived)
   buttonShadow: string
   buttonShadowPressed: string
   // Tier 3 — interactive ladder (mirror of theme.css; per-theme voices live in CSS)
@@ -79,6 +80,31 @@ const SOURCESANS3 = '"Source Sans 3", ui-sans-serif, system-ui, sans-serif'
 export const googleFontsUrl = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Bellota:wght@300;400;700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
+// relative luminance (the on-accent label law: a dark fill takes the
+// LIGHTER of text/bg as its label, a light fill the darker — Frank
+// 2026-11-24: ink's dark pill ate the dark label = "fix the we're on button")
+function relLum(color: string): number {
+  let r = 0, g = 0, b = 0
+  if (color.startsWith('hsl')) {
+    const m = color.match(/hsla?\(\s*([-.\d]+)\s*,\s*([-.\d]+)%\s*,\s*([-.\d]+)%/)
+    if (m) {
+      const hue = ((+m[1] % 360) + 360) % 360, sat = +m[2] / 100, lig = +m[3] / 100
+      const c = (1 - Math.abs(2 * lig - 1)) * sat
+      const x = c * (1 - Math.abs(((hue / 60) % 2) - 1))
+      const base = lig - c / 2
+      const t2 = hue / 60
+      const rgb = t2 < 1 ? [c, x, 0] : t2 < 2 ? [x, c, 0] : t2 < 3 ? [0, c, x] : t2 < 4 ? [0, x, c] : t2 < 5 ? [x, 0, c] : [c, 0, x]
+      r = rgb[0] + base; g = rgb[1] + base; b = rgb[2] + base
+    }
+  } else {
+    const h = color.replace('#', '')
+    r = parseInt(h.slice(0, 2), 16) / 255
+    g = parseInt(h.slice(2, 4), 16) / 255
+    b = parseInt(h.slice(4, 6), 16) / 255
+  }
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b
+}
+
 function hexA(color: string, alpha: number): string {
   if (color.startsWith('hsl')) {
     const m = color.match(/hsla?\(\s*([-.\d]+)\s*,\s*([-.\d]+)%\s*,\s*([-.\d]+)%/)
@@ -129,6 +155,9 @@ function make(t: ThemeSpec): ThemeColors {
     glow: `radial-gradient(circle, ${hexA(p.sparkle, 0.14)} 0%, transparent 70%)`,
     buttonStart: p.accent,
     buttonEnd: p.accent2,
+    buttonText: relLum(p.accent) < 0.45
+      ? (relLum(p.text) > relLum(p.bg) ? p.text : p.bg)
+      : p.text,
     buttonShadow: hexA(p.accent, 0.45),
     buttonShadowPressed: hexA(p.accent2, 0.3),
     // interactive ladder (generic derivations; theme.css carries the voices)
