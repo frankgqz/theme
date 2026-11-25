@@ -15,9 +15,9 @@ const themeIcons: Record<Theme, string> = {
 // swells TOWARD THE CENTRE until it almost covers the other four (they
 // stay visible, same size). Tapping the cluster advances CLOCKWISE;
 // tapping a circle jumps straight to it. Reduced motion = no animation.
-const R = 8.5   // pentagon circumradius: adjacent centres = 2R sin36 ~ 2r = the circles touch
-const r = 5     // resting circle radius
-const SIZE = 34 // the cluster box — line-height-ish
+const R = 12    // pentagon circumradius (loose enough that the four stay
+const r = 4.5   // visible beside the swelled one — Frank 2026-11-24: too cramped)
+const SIZE = 36 // the cluster box — line-height-ish
 const C = SIZE / 2
 
 export function ThemeToggle() {
@@ -52,10 +52,10 @@ export function ThemeToggle() {
         const ang = ((i * 72 - 90) * Math.PI) / 180
         const vx = C + R * Math.cos(ang)
         const vy = C + R * Math.sin(ang)
-        // ... and the selected circle lives 62% of the way to the centre,
-        // grown until it almost covers the four at their vertices
-        const cx = vx + (C - vx) * 0.62
-        const cy = vy + (C - vy) * 0.62
+        // ... and the selected circle swells 35% toward the centre: it eats
+        // the middle while the four keep their outer halves in view
+        const cx = vx + (C - vx) * 0.35
+        const cy = vy + (C - vy) * 0.35
         return (
           <div
             key={key}
@@ -69,7 +69,7 @@ export function ThemeToggle() {
               height: r * 2,
               borderRadius: '9999px',
               background: themes[key].accent,
-              transform: active ? 'scale(2.05)' : 'scale(1)',
+              transform: active ? 'scale(1.85)' : 'scale(1)',
               boxShadow: active
                 ? `0 0 10px ${themes[key].primitives.sparkle}`
                 : '0 1px 2px rgba(0,0,0,0.18)',
@@ -80,6 +80,11 @@ export function ThemeToggle() {
               fontSize: 11,
               lineHeight: 1,
               zIndex: active ? 2 : 1,
+              // the swelled circle is decoration — clicks fall THROUGH it to
+              // the cluster button (advance); the small ones stay jump targets
+              // (Frank 2026-11-24: 'I can't seem to toggle themes' = the big
+              // circle was swallowing every tap into a jump-to-self no-op)
+              pointerEvents: active ? 'none' : 'auto',
               cursor: 'pointer',
             }}
           >
