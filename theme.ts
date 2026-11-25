@@ -70,13 +70,13 @@ const FRAUNCES = '"Fraunces", Georgia, serif'
 const DMSANS = '"DM Sans", ui-sans-serif, system-ui, sans-serif'
 const BELLOTA = '"Bellota", ui-rounded, sans-serif'
 const SHANTELL = '"Shantell Sans", ui-rounded, cursive'
-const LIBREFRANKLIN = '"Libre Franklin", ui-sans-serif, system-ui, sans-serif'
+const SOURCESANS3 = '"Source Sans 3", ui-sans-serif, system-ui, sans-serif'
 
 // Single source of truth for the font FILE loading. The font names below are
 // just strings — the browser needs the files too. Consumers render this as a
 // <link> in their layout head (Turbopack strips the theme.css @import — see
 // AGENTS.md); theme.css keeps the same URL as its @import for vite consumers.
-export const googleFontsUrl = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Bellota:wght@300;400;700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Franklin:wght@300;400;500;600;700&display=swap'
+export const googleFontsUrl = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Bellota:wght@300;400;700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
 function hexA(color: string, alpha: number): string {
@@ -265,8 +265,8 @@ export const themes: Record<Theme, ThemeColors> = {
   // INK — black & white, the serious one ("apple themey kinda", Frank
   // 2026-11-24): pure white ground, near-black text, zero hue. The highlight
   // law INVERTS on a light ground — sparkle = pure ink = the glow/focus
-  // burns black against the white. Libre Franklin "for now" (Frank's pick;
-  // swapping the family later = one edit here + the URL above).
+  // burns black against the white. Source Sans 3 (Frank's pick 2026-11-24;
+  // was Libre Franklin "for now" — swapping = one edit here + the URL).
   ink: make({
     primitives: {
       bg: '#FFFFFF',
@@ -280,8 +280,8 @@ export const themes: Record<Theme, ThemeColors> = {
     particleHues: [
       { hue: [0, 0], sat: [0, 0] },   // mono: no hue, all value
     ],
-    fontFamily: LIBREFRANKLIN,
-    fontFamilyHeading: LIBREFRANKLIN,
+    fontFamily: SOURCESANS3,
+    fontFamilyHeading: SOURCESANS3,
     radiusButton: '12px',
     radiusCard: '16px',
     radiusInput: '8px',

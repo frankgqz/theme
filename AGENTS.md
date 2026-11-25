@@ -22,9 +22,9 @@ package `@gqz/theme`, lockfile-pinned → update ritual `npm update @gqz/theme`
 - Fonts (current): JetBrains Mono, Fredericka the Great, Klee One, Shantell
   Sans, Libre Franklin — declared as Google Fonts `@import` at the top of
   theme.css (the file channel: theme.ts `googleFontsUrl` = source of truth).
-  Font walk (2026-11-24, ink): current = Libre Franklin ("for now" — Frank's
-  pick while he browses Google Fonts); direction = open; swapping = one edit
-  in theme.ts + the URL.
+  Font walk (2026-11-24, ink): tried Libre Franklin ("for now" — his pick
+  while browsing, replaced same day); CURRENT = Source Sans 3 (Frank's
+  pick); direction = closed; swapping = one edit in theme.ts + the URL.
 - Font walk (2026-10-12, onsen slot): tried Klee One (Latin built for dense
   kanji — too light at display), Cedarville Cursive (extreme, hard to read),
   Mali 300, The Girl Next Door, Gaegu. CURRENT: Bellota (Frank's pick, warm
