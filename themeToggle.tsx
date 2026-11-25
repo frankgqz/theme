@@ -7,7 +7,7 @@ const themeIcons: Record<Theme, string> = {
   night: '\u{1F319}',
   bubble: '\u{1FAE7}',
   onsen: '\u2668\uFE0F',
-  ink: '\u26AA',
+  ink: '\u{1F359}',
 }
 
 // The pentagon toggle (Frank 2026-11-24): five circles TOUCHING in a
@@ -43,6 +43,10 @@ export function ThemeToggle() {
         padding: 0,
         background: 'transparent',
         border: 'none',
+        // the theme's button ladder paints EVERY <button> (square base with
+        // border + shadows) — this is a bare cluster, not a button pill
+        // (Frank 2026-11-24: 'remove that')
+        boxShadow: 'none',
         cursor: 'pointer',
       }}
     >
