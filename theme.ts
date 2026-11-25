@@ -300,11 +300,11 @@ export const themes: Record<Theme, ThemeColors> = {
     primitives: {
       bg: '#FFFFFF',
       panel: '#F5F5F7',
-      text: '#1D1D1F',
-      subtext: '#6E6E73',
-      accent: '#2C2C2E',
-      accent2: '#86868B',
-      sparkle: '#000000',
+      text: '#3A3A3C',
+      subtext: '#8E8E93',
+      accent: '#48484A',
+      accent2: '#A1A1A6',
+      sparkle: '#2C2C2E',
     },
     particleHues: [
       { hue: [0, 0], sat: [0, 0] },   // mono: no hue, all value
