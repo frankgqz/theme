@@ -158,8 +158,8 @@ function make(t: ThemeSpec): ThemeColors {
     buttonText: relLum(p.accent) < 0.45
       ? (relLum(p.text) > relLum(p.bg) ? p.text : p.bg)
       : p.text,
-    buttonShadow: hexA(p.accent, 0.45),
-    buttonShadowPressed: hexA(p.accent2, 0.3),
+    buttonShadow: hexA(p.accent, 0.28),
+    buttonShadowPressed: hexA(p.accent2, 0.18),
     // interactive ladder (generic derivations; theme.css carries the voices)
     motionFast: '150ms',
     motionBase: '220ms',
