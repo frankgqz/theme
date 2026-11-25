@@ -7,7 +7,7 @@ const themeIcons: Record<Theme, string> = {
   night: '\u{1F319}',
   bubble: '\u{1FAE7}',
   onsen: '\u2668\uFE0F',
-  ink: '\u25D0',
+  ink: '\u25A3',
 }
 
 // The pentagon toggle (Frank 2026-11-24): five circles TOUCHING in a
@@ -68,7 +68,7 @@ export function ThemeToggle() {
               height: r * 2,
               borderRadius: '9999px',
               background: themes[key].accent,
-              transform: active ? 'scale(1.85)' : 'scale(1)',
+              transform: active ? 'scale(2.2)' : 'scale(1)',
               boxShadow: active
                 ? `0 0 10px ${themes[key].primitives.sparkle}`
                 : '0 1px 2px rgba(0,0,0,0.18)',
