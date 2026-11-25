@@ -35,7 +35,7 @@ export function ThemeToggle() {
     <button
       onClick={advance}
       aria-label="Toggle theme"
-      title="toggle theme \u00b7 tap a circle to jump"
+      title="toggle theme (clockwise)"
       style={{
         position: 'relative',
         width: SIZE,
@@ -59,7 +59,6 @@ export function ThemeToggle() {
         return (
           <div
             key={key}
-            onClick={(e) => { e.stopPropagation(); setActiveTheme(key) }}
             title={key}
             style={{
               position: 'absolute',
@@ -80,12 +79,10 @@ export function ThemeToggle() {
               fontSize: 11,
               lineHeight: 1,
               zIndex: active ? 2 : 1,
-              // the swelled circle is decoration — clicks fall THROUGH it to
-              // the cluster button (advance); the small ones stay jump targets
-              // (Frank 2026-11-24: 'I can't seem to toggle themes' = the big
-              // circle was swallowing every tap into a jump-to-self no-op)
-              pointerEvents: active ? 'none' : 'auto',
-              cursor: 'pointer',
+              // ALL circles are decoration — one action only: clicking
+              // anywhere advances CLOCKWISE (Frank 2026-11-24: per-circle
+              // jumps read as 'sort of random'; just do clockwise)
+              pointerEvents: 'none',
             }}
           >
             {active ? themeIcons[key] : ''}
