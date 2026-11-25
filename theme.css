@@ -1,5 +1,5 @@
 /* keep this URL identical to googleFontsUrl in theme.ts */
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Bellota:wght@300;400;700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Bellota:wght@300;400;700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Franklin:wght@300;400;500;600;700&display=swap");
 
 
 /* src/theme.css — tiered palette
@@ -266,13 +266,13 @@ body {
 
 /* INK — black & white (the serious one); mirrors theme.ts primitives */
 [data-theme='ink'] {
-  --theme-bg: #101012;
-  --theme-panel: #1B1B1F;
-  --theme-text: #F4F4F2;
-  --theme-subtext: #9E9EA3;
-  --theme-accent: #EDEDEA;
-  --theme-accent-2: #77777E;
-  --theme-sparkle: #FFFFFF;
+  --theme-bg: #FFFFFF;
+  --theme-panel: #F5F5F7;
+  --theme-text: #1D1D1F;
+  --theme-subtext: #6E6E73;
+  --theme-accent: #2C2C2E;
+  --theme-accent-2: #86868B;
+  --theme-sparkle: #000000;
   --c1: var(--theme-bg);
   --c2: var(--theme-panel);
   --c3: var(--theme-text);
@@ -280,7 +280,7 @@ body {
   --c5: var(--theme-accent);
   --c6: var(--theme-accent-2);
   --c7: var(--theme-sparkle);
-  --theme-radius-button: 8px;
-  --theme-radius-card: 10px;
-  --theme-radius-input: 4px;
+  --theme-radius-button: 12px;
+  --theme-radius-card: 16px;
+  --theme-radius-input: 8px;
 }

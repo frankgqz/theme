@@ -70,12 +70,13 @@ const FRAUNCES = '"Fraunces", Georgia, serif'
 const DMSANS = '"DM Sans", ui-sans-serif, system-ui, sans-serif'
 const BELLOTA = '"Bellota", ui-rounded, sans-serif'
 const SHANTELL = '"Shantell Sans", ui-rounded, cursive'
+const LIBREFRANKLIN = '"Libre Franklin", ui-sans-serif, system-ui, sans-serif'
 
 // Single source of truth for the font FILE loading. The font names below are
 // just strings — the browser needs the files too. Consumers render this as a
 // <link> in their layout head (Turbopack strips the theme.css @import — see
 // AGENTS.md); theme.css keeps the same URL as its @import for vite consumers.
-export const googleFontsUrl = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Bellota:wght@300;400;700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap'
+export const googleFontsUrl = 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Fredericka+the+Great&family=Bellota:wght@300;400;700&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&family=Libre+Franklin:wght@300;400;500;600;700&display=swap'
 const SERIF = '"Fraunces", Georgia, "Times New Roman", serif'
 
 function hexA(color: string, alpha: number): string {
@@ -261,27 +262,30 @@ export const themes: Record<Theme, ThemeColors> = {
     radiusInput: '6px',
     shadowStrength: 0.12,
   }),
-  // INK — black & white, the serious one. A pure value ladder: paper white
-  // on graphite black, zero hue anywhere. Sparkle = pure white = THE
-  // highlight (the glow family burns white against the ink ground).
-  // Font = Frank's call (the law: ask before assigning) — make() defaults.
+  // INK — black & white, the serious one ("apple themey kinda", Frank
+  // 2026-11-24): pure white ground, near-black text, zero hue. The highlight
+  // law INVERTS on a light ground — sparkle = pure ink = the glow/focus
+  // burns black against the white. Libre Franklin "for now" (Frank's pick;
+  // swapping the family later = one edit here + the URL above).
   ink: make({
     primitives: {
-      bg: '#101012',
-      panel: '#1B1B1F',
-      text: '#F4F4F2',
-      subtext: '#9E9EA3',
-      accent: '#EDEDEA',
-      accent2: '#77777E',
-      sparkle: '#FFFFFF',
+      bg: '#FFFFFF',
+      panel: '#F5F5F7',
+      text: '#1D1D1F',
+      subtext: '#6E6E73',
+      accent: '#2C2C2E',
+      accent2: '#86868B',
+      sparkle: '#000000',
     },
     particleHues: [
       { hue: [0, 0], sat: [0, 0] },   // mono: no hue, all value
     ],
-    radiusButton: '8px',
-    radiusCard: '10px',
-    radiusInput: '4px',
-    shadowStrength: 0.5,
+    fontFamily: LIBREFRANKLIN,
+    fontFamilyHeading: LIBREFRANKLIN,
+    radiusButton: '12px',
+    radiusCard: '16px',
+    radiusInput: '8px',
+    shadowStrength: 0.08,
   }),
 }
 
